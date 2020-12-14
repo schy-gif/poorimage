@@ -11,13 +11,21 @@ $('.marquee').marquee({
     //gap in pixels between the tickers
     gap: 50,
     //time in milliseconds before the marquee will start animating
-    delayBeforeStart: 500,
+    delayBeforeStart: 900,
     //'left' or 'right'
     direction: 'left',
     //true or false - should the marquee be duplicated to show an effect of continues flow
     duplicated: true, 
     startVisible: true
 })
+
+$(document).scroll(function(){
+            var scrollNumber = $(document).scrollTop();
+            $(".long-text").css({
+                "left":0-scrollNumber
+            })
+        })
+
 
 $("#layout1__s1").hover(function(){
     $(".hover-on-1").addClass("active");
