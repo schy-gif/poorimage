@@ -5,19 +5,31 @@
 
 
     //FIX THIS . PUT IT IN ITS OWN FILE
-
+$('.marquee').marquee({
+    //duration in milliseconds of the marquee
+    duration: 45000,
+    //gap in pixels between the tickers
+    gap: 50,
+    //time in milliseconds before the marquee will start animating
+    delayBeforeStart: 500,
+    //'left' or 'right'
+    direction: 'left',
+    //true or false - should the marquee be duplicated to show an effect of continues flow
+    duplicated: true, 
+    startVisible: true
+})
 
 $("#layout1__s1").hover(function(){
     $(".hover-on-1").addClass("active");
-// }, function(){
-//     $(".hover-on-1").removeClass("active");
-})
-
-$("#box1").hover(function(){
-    $(this).addClass("open");
 }, function(){
     $(".hover-on-1").removeClass("active");
 })
+
+// $("#box1").hover(function(){
+//     $(this).addClass("open");
+// }, function(){
+//     $(".hover-on-1").removeClass("active");
+// })
 
 
 
